@@ -48,3 +48,22 @@ var jonas={
 
 const{ firstname,lastname,age,dpt, marks:{math,phy,che},license,skills,summary}=jonas;
 console.log(summary.bind(jonas)());
+
+
+
+
+
+
+
+// we can use object attributes without calling the function by declaring the attribute outside the function using prototype
+
+const convertKelvin=function(){
+    const measurement={
+        type:'temp',
+        value:Number(prompt(`Enter the celcius value`))
+    }
+    const kelvin=measurement['value']+273;
+    return kelvin;
+}
+convertKelvin.prototype.unit="celcius";
+console.log(convertKelvin.prototype.unit);

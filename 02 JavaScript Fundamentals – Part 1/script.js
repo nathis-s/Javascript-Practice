@@ -159,7 +159,7 @@
 // console.log(res2);
 
 
-// printinng in next line:
+// printing in next line:
 // console.log('I am Nathis S \n\My age is 20 \n\Department is CT');
 // console.log();
 // console.log(`I am Nathis S

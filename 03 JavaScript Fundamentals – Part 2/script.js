@@ -308,8 +308,7 @@
 
 
 // print the index of the value and it is based strict equality
-
-// const arr=[53,76,96,57];
+ // const arr=[53,76,96,57];
 // console.log(arr.indexOf(76));
 // console.log(arr.indexOf('76'));
 
@@ -608,3 +607,180 @@
 // console.log(jonas.summary());
 
 
+
+// 3-45 Coding challenge 3
+
+// const mark={
+//     fullname:'Mark Miller',
+//     mass:78,
+//     height:1.69,
+//     calcBMI:function(){
+//         this.BMI=this.mass/(this.height*this.height);
+//         return this.BMI;
+//     }
+// }
+// const john={
+//     fullname:'John Smith',
+//     mass:92,
+//     height:1.95,
+//     calcBMI:function(){
+//         this.BMI=this.mass/(this.height*this.height);
+//         return this.BMI;
+//     }
+// }
+// const res=function(){
+//     if(mark['calcBMI']()>john['calcBMI']()){
+//         return `${mark['fullname']}'s BMI (${mark['BMI']}) is higher than ${john['fullname']} (${john['BMI']})`;
+//     }
+//     else{
+//         return `${john['fullname']}'s BMI (${john['BMI']}) is higher than mark['fullname'] (${mark['BMI']}))`;
+//     }
+// }
+// console.log(res());
+
+
+
+// 3-46 Iterator_The for loop
+
+// for(var students=1;students<=10;students++){
+//     console.log(`No of students in CT dpt is ${students}`);
+// }
+
+
+
+// 3-47 looping arrays,breaking and continuing
+
+// Eg:1
+
+// const arr=['Michael',43,'Orange',['John','Richard','Karin']];
+// var type=[];
+// for(var i=0;i<arr.length;i++){
+//     console.log(arr[i]);
+//     type.push(typeof(arr[i]));
+// }
+// console.log(type);
+
+
+// Eg:2
+
+// const arr=['Michael',43,'Orange',['John','Richard','Karin']];
+// var type=[];
+// for(var i=0;i<arr.length;i++){
+//     console.log(arr[i]);
+//     type[i]=typeof(arr[i]);
+// }
+// console.log(type);
+
+
+// break and continue
+
+// break
+// Eg:1  by adding the data using index value
+// if we use this method,in some point of time empty value will be added to the array
+// so always recommended to use eg:2
+
+// const arr=['Michael',43,'Orange','Bravo',['John','Richard'],34,65,'Mongo',45];
+// var type1=[];
+// for(var i=0;i<arr.length;i++){
+//     if(typeof(arr[i])=='string'){
+//         continue;
+//     }
+//     type1[i]=typeof(arr[i]);
+// }
+// console.log(type1);
+
+
+// Eg:2
+
+// const arr=['Michael',43,'Orange','Bravo',['John','Richard'],34,65,'Mongo',45]
+
+// var type2=[];
+// for(var i=0;i<arr.length;i++){
+//     if(typeof(arr[i])=='object'){
+//         break;
+//     }
+//     type2.push((arr[i]));
+// }
+// console.log(type2);
+
+
+
+
+// 3-48 loop backwards and loops in loops
+
+// const arr=['Michael',43,'Orange','Bravo',['John','Richard'],34,65,'Mongo',45];
+// for(var i=arr.length-1;i>=0;i--){
+//     console.log(arr[i]);
+// }
+
+
+// nested loop
+
+// for(var i=0;i<5;i++){
+//     for(var j=0;j<3;j++){
+//         console.log(i+" "+j);
+//     }
+// }
+
+
+// to access the nested array
+
+// const arr=['Michael',43,'Orange','Bravo',['John','Richard'],34,65,'Mongo',45]
+// for(var i=0;i<arr.length;i++){
+//     if(typeof(arr[i])=='object'){
+//         for(var j=0;j<arr[i].length;j++){
+//             if(arr[i][j]=='Richard'){
+//                 console.log(true);
+//             }
+//         }
+//     }
+//     else{
+//         if(arr[i]=='Richard'){
+//             console.log(true);
+//         }
+//     }
+// }
+
+
+
+// 3-49 while loop
+
+// var index=1;
+// while(index<=10){
+//     console.log(index);
+//     index++;
+// }
+
+
+// var var1=Math.trunc(Math.random()*6);
+// while(var1!=5){
+//     console.log(var1);
+//     var1=Math.trunc(Math.random()*6);
+// }
+
+
+
+// 3-50 Coding challenge
+
+// var bills=[22,295,176,440,37,105,10,1100,86,52];
+// var tips=[];
+// var total=[];
+// function calcTip(billValue){
+//     return billValue>=50 && billValue<300 ? billValue*0.15 : billValue*0.20;
+// }
+// for(var i=0;i<bills.length;i++){
+//     tips.push(calcTip(bills[i]));
+//     total.push(bills[i]+tips[i]);
+// }
+// console.log(total);
+
+
+// var bills=[22,295,176,440,37,105,10,1100,86,52];
+// function calcAverage(bills){
+//     var sum=0;
+//     for(var i=0;i<bills.length;i++){
+//         sum+=bills[i];
+//     }
+//     return sum/bills.length;
+// }
+// console.log(calcAverage(bills)) ;
